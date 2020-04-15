@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="topbox" id="topbox">
+    <img class="iconImage" src="{{ url_for('static', filename='image/icon.png') }}">
+    <div class="icons">
+        <a class="aitems"> 首页 </a>
+        <a class="aitems"> 追**星座男生 </a>
+        <a class="aitems"> 追**星座女生 </a>
+        <a class="aitems"> 星座配对 </a>
+        <a class="aitems"> 关于本站 </a>
+    </div>
+    <div class="hitokoto">
+        <p>{{hitokoto.hitokoto}}</p>
+        <p>—— [{{hitokoto.from}}]</p>
+    </div>
+
+</div>
+
+{% endblock %}

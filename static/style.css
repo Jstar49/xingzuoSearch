@@ -1,0 +1,51 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+div.topbox{
+    position: relative;
+    height: 330px;
+    height: 20.625rem;
+    background-image: url(image/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    z-index: -1;
+}
+
+div.icons{
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    margin: 15px 60px;
+}
+img.iconImage{
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    margin: 15px 20px;
+
+}
+div.icons a.aitems{
+    padding: 10px 10px;
+
+}
+
+div.hitokoto{
+    position: absolute;
+    text-align:right;
+    right: 1%;
+    float: right;
+    text-shadow: 0px 2px 12px #141414;
+    letter-spacing: 1px;
+}
