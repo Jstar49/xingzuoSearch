@@ -5,17 +5,62 @@
 <div class="topbox" id="topbox">
     <img class="iconImage" src="{{ url_for('static', filename='image/icon.png') }}">
     <div class="icons">
-        <a class="aitems"> 首页 </a>
-        <a class="aitems"> 追**星座男生 </a>
-        <a class="aitems"> 追**星座女生 </a>
-        <a class="aitems"> 星座配对 </a>
-        <a class="aitems"> 关于本站 </a>
+        <a class="aitems" href="/"> 首页 </a>
+        <a class="aitems" href="/male"> 追**星座男生 </a>
+        <a class="aitems" href="/female"> 追**星座女生 </a>
+        <a class="aitems" href="/match"> 星座配对 </a>
+        <a class="aitems" href="/about"> 关于本站 </a>
     </div>
     <div class="hitokoto">
         <p>{{hitokoto.hitokoto}}</p>
         <p>—— [{{hitokoto.from}}]</p>
     </div>
 
+    <div class="constellationSelect">
+        {% if flags=="index" %}
+        <h2>星座性格查询 </h2>
+        {% elif flags=="male" %}
+        <h2> 追xx座男生 </h2>
+        {% elif flags=="female" %}
+        <h2> 追xx座女生 </h2>
+        {% elif flags=="match" %}
+        <h2> 星座匹配 </h2>
+        {% elif flags=="about" %}
+        <h2> 关于本站 </h2>
+        {% endif %}
+        {% if flags!="about" %}
+        <select class="xingzuoSele" id="xingzuo">
+            <option value="baiyang">白羊</option>
+            <option value="jinniu">金牛</option>
+            <option value="shuangzi">双子</option>
+            <option value="juxie">巨蟹</option>
+            <option value="shizi">狮子</option>
+            <option value="chunv">处女</option>
+            <option value="tiancheng">天秤</option>
+            <option value="tianxie">天蝎</option>
+            <option value="sheshou">射手</option>
+            <option value="mojie">摩羯</option>
+            <option value="shuiping">水瓶</option>
+            <option value="shuangyu">双鱼</option>
+        </select>
+        <button class="subXing" id="subButton" data={{ flags }} onclick="GetTexts(this)">查询</button>
+
+        {% endif %}
+    </div>
+</div>
+
+<div class="main">
+    <div class="conts" id="conts">
+
+        {% if flags=="about" %}
+        <h3>关于</h3>
+        {% else %}
+        <div class="imgdiv">
+            <img src="{{ url_for('static', filename='image/'+ flags+'.png') }}">
+        </div>
+        {% endif %}
+        
+    </div>
 </div>
 
 {% endblock %}

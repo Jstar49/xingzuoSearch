@@ -19,3 +19,25 @@ function clicks(){
         }
     })
 }
+
+function GetTexts(obj) {
+    var sdata = {
+                "xingzuo": $("#xingzuo").val(),
+                "method":$('#subButton').attr('data')};
+    $.ajax({
+        url:"/getText",
+  　　  type : "post",
+  　　  dataType:"json",
+        headers: {
+            "Content-Type": "application/json;charset=utf-8"
+        },
+        contentType:'application/json; charset=utf-8',
+        data:JSON.stringify(sdata),
+        success:function(data){
+            $("#conts").html(data.texts)
+        },
+        error:function(e){
+                alert("error");
+        }
+    })
+}

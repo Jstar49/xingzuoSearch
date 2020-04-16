@@ -1,0 +1,28 @@
+div.main{
+    position: relative;
+    width: 60%;
+    display: block;
+    background-color: #dae6e4;
+    left: 20%;
+    top: 40px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    align-items: center;
+    opacity:0.8;
+}
+div.main div.conts{
+    position: relative;
+    display: block;
+    width: 90%;
+    left: 5%;
+    top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    align:center;
+}
+div.imgdiv{
+    position: relative;
+    text-align:center;
+}
