@@ -1,19 +1,20 @@
 body{
     overflow: auto;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     margin: 0;
     padding: 0;
-    background:#fff url("image/cat.png") left top;
+    background:#fff url("../image/cat.png") left top;
 }
 
 div.topbox{
     position: relative;
+    width: 100%;
     height: 330px;
     height: 20.625rem;
-    background-image: url(image/bg.png);
-    background-repeat: no-repeat;
+    background-image: url(../image/ccc3.JPG);
+    /*background-repeat: no-repeat;*/
     background-size: cover;
-    background-position: 50%;
+    background-position: 50% 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +27,7 @@ div.icons{
     position: absolute;
     left: 0;
     top: 10px;
-    width: 100%;
+    /*width: 100%;*/
     margin: 15px 60px;
 }
 img.iconImage{
@@ -50,7 +51,7 @@ div.hitokoto{
     position: absolute;
     text-align:right;
     right: 1%;
-    float: right;
+    /*float: right;*/
     text-shadow: 0px 2px 12px #141414;
     letter-spacing: 1px;
 }

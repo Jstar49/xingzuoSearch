@@ -3,8 +3,10 @@ import time
 import requests
 import re
 import random
+from datetime import timedelta
 
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
 
 # 一言
 def Hitokoto():
@@ -130,6 +132,6 @@ def index():
     # chars = getCharacter()
     return render_template('index.html', hitokoto=hitokoto, flags="index")
 
-app.secret_key = '123sdf'
+app.secret_key = '1456465f'
 if __name__ == '__main__':
     app.run(debug=True)

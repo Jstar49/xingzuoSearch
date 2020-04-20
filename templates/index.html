@@ -54,6 +54,27 @@
 
         {% if flags=="about" %}
         <h3>关于</h3>
+        <p>鉴于最近某人一直向我灌输星座知识，为了巩固新学的 Flask 框架，便开发此站点。（貌似并没有因果关系...）</p>
+        <h4>功能列表</h4>
+        <ul>
+            <li>星座性格查询</li>
+            <li>追xx座男生/女生</li>
+            <li>星座最佳匹配</li>
+        </ul>
+
+        <h4>数据来源</h4>
+        <a class="noi" href="https://www.zuixingzuo.net/"><b>星座</b></a><br>
+        <i>所有分析数据皆来源于此，此网站对分析正确性不做保证，如有误析请谅解。</i>
+        <br>
+        <h4>项目开源地址</h4>
+        <a class="noi" href="https://github.com/MyBules/xingzuoSearch">GitHub/Mybules</a>
+        <br>
+        <h4>Master & Email</h4>
+        <p>Master: <a class="noi" href="https://mybules.com"><b>四十九C-137</b></a><br></p>
+        <p>Email: jxxclj@gmail.com</p>
+        <h4>一些声明</h4>
+        <b>此站点的数据 & 图片皆来源于网络，如您为原作者，侵权请邮件联系删除。</b>
+        <br>
         {% else %}
         <div class="imgdiv">
             <img src="{{ url_for('static', filename='image/'+ flags+'.png') }}">

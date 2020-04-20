@@ -26,3 +26,6 @@ div.imgdiv{
     position: relative;
     text-align:center;
 }
+a.noi{
+    text-decoration: none;
+}
